@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Blade Arena: Legacy of the Tenth Lord</title>
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ========================= -->
+<!-- PANTALLA DE CARGA -->
+<!-- ========================= -->
+
+<div id="loadingScreen" class="screen active">
+
+    <div class="logoContainer">
+        <h1 class="gameTitle">
+            BLADE ARENA
+        </h1>
+
+        <h2 class="gameSubtitle">
+            Legacy of the Tenth Lord
+        </h2>
+
+        <div class="loadingBar">
+            <div id="loadingFill"></div>
+        </div>
+
+        <p id="loadingText">
+            Despertando la Arena Eterna...
+        </p>
+    </div>
+
+</div>
+
+<!-- ========================= -->
+<!-- MENÚ PRINCIPAL -->
+<!-- ========================= -->
+
+<div id="mainMenu" class="screen hidden">
+
+    <div class="menuCenter">
+
+        <h1 class="menuTitle">
+            BLADE ARENA
+        </h1>
+
+        <h2 class="menuSubtitle">
+            Legacy of the Tenth Lord
+        </h2>
+
+        <div class="menuButtons">
+
+            <button id="startBtn">
+                Iniciar Leyenda
+            </button>
+
+            <button id="storyBtn">
+                Historia
+            </button>
+
+            <button id="controlsBtn">
+                Controles
+            </button>
+
+            <button id="creditsBtn">
+                Créditos
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- ========================= -->
+<!-- HISTORIA -->
+<!-- ========================= -->
+
+<div id="storyScreen" class="screen hidden">
+
+    <div class="storyBox">
+
+        <h2>
+            La Leyenda del Décimo Lord
+        </h2>
+
+        <div id="storyText">
+
+            <p>
+                Hace siglos existían veinte Señores de la Espada,
+                guerreros creados para mantener el equilibrio entre los reinos.
+            </p>
+
+            <p>
+                El décimo de ellos, Smash Lord X,
+                dominó las Seis Artes Supremas del Combate.
+            </p>
+
+            <p>
+                Tras una guerra que destruyó el mundo conocido,
+                los otros diecinueve desaparecieron.
+            </p>
+
+            <p>
+                Ahora han regresado convertidos en Campeones
+                de la Arena Eterna.
+            </p>
+
+            <p>
+                Smash Lord X deberá derrotarlos uno por uno,
+                recuperar los Fragmentos de la Corona Perdida
+                y enfrentarse al Primer Señor de la Espada:
+                Aurelius.
+            </p>
+
+        </div>
+
+        <button class="backButton">
+            Volver
+        </button>
+
+    </div>
+
+</div>
+
+<!-- ========================= -->
+<!-- CONTROLES -->
+<!-- ========================= -->
+
+<div id="controlsScreen" class="screen hidden">
+
+    <div class="panel">
+
+        <h2>Controles</h2>
+
+        <div class="controlGrid">
+
+            <div>↑ ↓ ← →</div>
+            <div>Movimiento</div>
+
+            <div>A</div>
+            <div>Ataque rápido</div>
+
+            <div>D</div>
+            <div>Dash</div>
+
+            <div>S</div>
+            <div>Super Espadazo</div>
+
+            <div>F</div>
+            <div>Ataque Omnidireccional</div>
+
+            <div>ESC</div>
+            <div>Pausa</div>
+
+        </div>
+
+        <button class="backButton">
+            Volver
+        </button>
+
+    </div>
+
+</div>
+
+<!-- ========================= -->
+<!-- CRÉDITOS -->
+<!-- ========================= -->
+
+<div id="creditsScreen" class="screen hidden">
+
+    <div class="panel">
+
+        <h2>Créditos</h2>
+
+        <p>
+            Blade Arena: Legacy of the Tenth Lord
+        </p>
+
+        <p>
+            Protagonista:
+            Smash Lord X
+        </p>
+
+        <p>
+            Los Veinte Señores de la Espada
+        </p>
+
+        <button class="backButton">
+            Volver
+        </button>
+
+    </div>
+
+</div>
+
+<!-- ========================= -->
+<!-- TRANSICIÓN DE RONDA -->
+<!-- ========================= -->
+
+<div id="roundScreen" class="screen hidden">
+
+    <div class="roundBox">
+
+        <h1 id="roundTitle">
+            RONDA 1
+        </h1>
+
+        <h2 id="enemyName">
+            Vulkan el Rompefilos
+        </h2>
+
+        <p id="enemyType">
+            Especialista en Fuerza
+        </p>
+
+        <button id="fightBtn">
+            COMBATIR
+        </button>
+
+    </div>
+
+</div>
+
+<!-- ========================= -->
+<!-- HUD DEL JUEGO -->
+<!-- ========================= -->
+
+<div id="hud" class="hidden">
+
+    <div id="topBar">
+
+        <div class="playerInfo">
+
+            <div>
+                Smash Lord X
+            </div>
+
+            <div class="healthContainer">
+                <div id="playerHealth"></div>
+            </div>
+
+        </div>
+
+        <div class="roundInfo">
+
+            <div id="roundNumber">
+                RONDA 1
+            </div>
+
+        </div>
+
+        <div class="bossInfo">
+
+            <div id="bossName">
+                Vulkan el Rompefilos
+            </div>
+
+            <div class="bossHealthContainer">
+                <div id="bossHealth"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- HABILIDADES -->
+
+    <div id="skillBar">
+
+        <div class="skill">
+            A
+        </div>
+
+        <div class="skill">
+            D
+        </div>
+
+        <div class="skill">
+            S
+        </div>
+
+        <div class="skill">
+            F
+        </div>
+
+    </div>
+
+</div>
+
+<!-- ========================= -->
+<!-- CANVAS -->
+<!-- ========================= -->
+
+<canvas id="gameCanvas"></canvas>
+
+<!-- ========================= -->
+<!-- PAUSA -->
+<!-- ========================= -->
+
+<div id="pauseMenu" class="screen hidden">
+
+    <div class="panel">
+
+        <h1>
+            PAUSA
+        </h1>
+
+        <button id="resumeBtn">
+            Continuar
+        </button>
+
+        <button id="menuBtn">
+            Menú Principal
+        </button>
+
+    </div>
+
+</div>
+
+<!-- ========================= -->
+<!-- VICTORIA -->
+<!-- ========================= -->
+
+<div id="victoryScreen" class="screen hidden">
+
+    <div class="panel">
+
+        <h1>
+            VICTORIA
+        </h1>
+
+        <h2>
+            Aurelius ha sido derrotado
+        </h2>
+
+        <p>
+            Smash Lord X ha reclamado el título
+            del Señor Supremo de la Espada.
+        </p>
+
+        <button id="victoryMenuBtn">
+            Menú Principal
+        </button>
+
+    </div>
+
+</div>
+
+<!-- ========================= -->
+<!-- DERROTA -->
+<!-- ========================= -->
+
+<div id="gameOverScreen" class="screen hidden">
+
+    <div class="panel">
+
+        <h1>
+            DERROTA
+        </h1>
+
+        <p>
+            La Arena Eterna reclama otro campeón.
+        </p>
+
+        <button id="retryBtn">
+            Reintentar
+        </button>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
